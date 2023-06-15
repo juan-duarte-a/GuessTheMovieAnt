@@ -46,12 +46,16 @@ public class GuessTheMovie {
                     movies[countMovies] = movie.toLowerCase();
                     countMovies++;
                 }
+                
+                reader.close();
+                inputStream.close();
             } else {
                 System.err.println("'peliculas.txt' not found!");
             }
         } catch (IOException e) {
             System.out.println(e);
         }
+        
 
         return movies;
     }
